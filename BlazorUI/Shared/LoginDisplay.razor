@@ -1,0 +1,15 @@
+﻿@using BlazorUI.Extensions
+<nav class="inline-flex">
+    <AuthorizeView>
+        <Authorized>
+            <a href="Identity/Account/Manage">Hello, @context.GetUserName()</a>
+            <form method="post" action="Identity/Account/LogOut">
+                <button type="submit" class="px-3 hover:bg-green-200">Log out</button>
+            </form>
+        </Authorized>
+        <NotAuthorized>
+            <a href="Identity/Account/Register">Register</a>
+            <a href="Identity/Account/Login">Log in</a>
+        </NotAuthorized>
+    </AuthorizeView>
+</nav>
