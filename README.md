@@ -35,7 +35,7 @@ This is a Blazor server web application template.  Use this to start a Blazor pr
 
 - View > Other Windows > Task Runner Explorer
 - To create the development version of the wwwroot/site.css file, right click "css:dev" > Run
-  - Create the full size css file for development.  Over 2MB.
+  - It creates the full size css file for development.  Over 2MB.
 - To create the production version of the wwwroot/site.css file, right click "css:prod" > Run
   - This will minify to a real small css file.
 - The "watch" in task runner will start when the project is opened.  It will automatically update
@@ -62,7 +62,8 @@ This is a Blazor server web application template.  Use this to start a Blazor pr
 - Add-Migration InitialCreate
 - Update-Database -Context "Core.Model.CoreDbContext"
 
-## Make into a Docker project
+## Dockers
+- Add this code to make this into a dockers projects.
 ```xml
   <-- Add this into the *.csproj file. -->
   <PropertyGroup>
