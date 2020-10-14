@@ -60,7 +60,7 @@ This is a Blazor server web application template.  Use this to start a Blazor pr
 - NuGet package Microsoft.EntityFrameworkCore.Tools
 - NuGet package Microsoft.EntityFrameworkCore.{SqlServer, SqLite, ...}
 - Add-Migration InitialCreate
-- Update-Database -Context "Core.Model.CoreDbContext"
+- Update-Database
 
 ## Dockers
 - Add this code to make this into a dockers projects.

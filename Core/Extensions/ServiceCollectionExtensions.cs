@@ -4,6 +4,8 @@
 
 namespace Core.Extensions
 {
+    using Core.Model;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
 
     /// <summary>
@@ -16,8 +18,10 @@ namespace Core.Extensions
         /// </summary>
         /// <param name="services">IServiceCollection.</param>
         /// <returns>Updated IServiceCollection.</returns>
-        public static IServiceCollection AddCoreServes(this IServiceCollection services)
+        public static IServiceCollection AddCoreServes(this IServiceCollection services, string connectionString)
         {
+            services.AddDbContext<CoreDbContext>(
+                        options => options.UseSqlite(connectionString, options => options.MigrationsAssembly("Core")));
             return services;
         }
     }

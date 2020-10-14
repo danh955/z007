@@ -1,5 +1,6 @@
 using BlazorUI.Areas.Identity;
 using BlazorUI.Data;
+using Core.Extensions;
 using Core.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -25,9 +26,7 @@ namespace BlazorUI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CoreDbContext>(
-                    options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"),
-                                                options => options.MigrationsAssembly("Core")));
+            services.AddCoreServes(Configuration.GetConnectionString("DefaultConnection"));
             services.AddDefaultIdentity<IdentityUser>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = true;
@@ -53,6 +52,9 @@ namespace BlazorUI
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+
+                // This will migrate the database if any changes.
+                context.Database.Migrate();
             }
 
             app.UseHttpsRedirection();
@@ -69,9 +71,6 @@ namespace BlazorUI
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
-
-            // This will migrate the database if any.
-            context.Database.Migrate();
         }
     }
 }
