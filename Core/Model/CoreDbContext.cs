@@ -1,5 +1,5 @@
-﻿// <copyright file="CoreDbContext.cs" company="Hilres">
-// Copyright (c) Hilres. All rights reserved.
+﻿// <copyright file="CoreDbContext.cs" company="MyProject">
+// Copyright (c) MyProject. All rights reserved.
 // </copyright>
 
 namespace Core.Model

@@ -1,5 +1,5 @@
-﻿// <copyright file="HttpContextAccessorExtension.cs" company="Hilres">
-// Copyright (c) Hilres. All rights reserved.
+﻿// <copyright file="HttpContextAccessorExtension.cs" company="MyProject">
+// Copyright (c) MyProject. All rights reserved.
 // </copyright>
 
 namespace BlazorUI.Extensions

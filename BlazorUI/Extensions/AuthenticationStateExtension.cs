@@ -1,5 +1,5 @@
-﻿// <copyright file="AuthenticationStateExtension.cs" company="Hilres">
-// Copyright (c) Hilres. All rights reserved.
+﻿// <copyright file="AuthenticationStateExtension.cs" company="MyProject">
+// Copyright (c) MyProject. All rights reserved.
 // </copyright>
 
 namespace BlazorUI.Extensions

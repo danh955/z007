@@ -1,5 +1,5 @@
-﻿// <copyright file="ServiceCollectionExtensions.cs" company="Hilres">
-// Copyright (c) Hilres. All rights reserved.
+﻿// <copyright file="ServiceCollectionExtensions.cs" company="MyProject">
+// Copyright (c) MyProject. All rights reserved.
 // </copyright>
 
 namespace Core.Extensions
@@ -17,6 +17,7 @@ namespace Core.Extensions
         /// Add core serves.
         /// </summary>
         /// <param name="services">IServiceCollection.</param>
+        /// <param name="connectionString">Connection string.</param>
         /// <returns>Updated IServiceCollection.</returns>
         public static IServiceCollection AddCoreServes(this IServiceCollection services, string connectionString)
         {
