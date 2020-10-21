@@ -19,6 +19,7 @@ This is a Blazor server web application template.  Use this to start a Blazor pr
 ### Visual Sudio Settings
 
 - Tools > Options > Text Editor > C# > Advanced > Place 'System' directives first when sorting using = Checked.
+- Tools > Options > Projects and Solutions > Web Package Management > Package Restore > Restore On Project Open = True.
 
 ### Visual Studio Extensions
 
