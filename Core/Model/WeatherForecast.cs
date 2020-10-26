@@ -1,13 +1,13 @@
-// <copyright file="WeatherForecast.cs" company="MyProject">
+﻿// <copyright file="WeatherForecast.cs" company="MyProject">
 // Copyright (c) MyProject. All rights reserved.
 // </copyright>
 
-namespace BlazorUI.Data
+namespace Core.Model
 {
     using System;
 
     /// <summary>
-    /// Weather forecast class.
+    /// WeatherFforecast class.
     /// </summary>
     public class WeatherForecast
     {

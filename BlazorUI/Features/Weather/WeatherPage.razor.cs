@@ -6,7 +6,8 @@ namespace BlazorUI.Features.Weather
 {
     using System;
     using System.Threading.Tasks;
-    using BlazorUI.Data;
+    using Core.Features.Weather;
+    using MediatR;
     using Microsoft.AspNetCore.Components;
 
     /// <content>
@@ -14,15 +15,15 @@ namespace BlazorUI.Features.Weather
     /// </content>
     public partial class WeatherPage : ComponentBase
     {
-        private WeatherForecast[] forecasts;
+        private ListWeatherForecast.Result model;
 
         [Inject]
-        private WeatherForecastService ForecastService { get; set; }
+        private IMediator Mediator { get; set; }
 
         /// <inheritdoc/>
         protected override async Task OnInitializedAsync()
         {
-            this.forecasts = await this.ForecastService.GetForecastAsync(DateTime.Now).ConfigureAwait(false);
+            this.model = await this.Mediator.Send(new ListWeatherForecast.Request(DateTime.Now)).ConfigureAwait(false);
         }
     }
 }

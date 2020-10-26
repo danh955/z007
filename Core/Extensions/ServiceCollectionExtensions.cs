@@ -5,6 +5,7 @@
 namespace Core.Extensions
 {
     using Core.Model;
+    using MediatR;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
 
@@ -21,8 +22,8 @@ namespace Core.Extensions
         /// <returns>Updated IServiceCollection.</returns>
         public static IServiceCollection AddCoreServes(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<CoreDbContext>(
-                        options => options.UseSqlite(connectionString, options => options.MigrationsAssembly("Core")));
+            services.AddDbContext<CoreDbContext>(options => options.UseSqlite(connectionString, options => options.MigrationsAssembly("Core")));
+            services.AddMediatR(typeof(ServiceCollectionExtensions));
             return services;
         }
     }

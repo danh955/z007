@@ -2,10 +2,11 @@
 // Copyright (c) MyProject. All rights reserved.
 // </copyright>
 
+#pragma warning disable CA1822 // Mark members as static
+
 namespace BlazorUI
 {
     using BlazorUI.Areas.Identity;
-    using BlazorUI.Data;
     using Core.Extensions;
     using Core.Model;
     using Microsoft.AspNetCore.Builder;
@@ -22,8 +23,6 @@ namespace BlazorUI
     /// </summary>
     public class Startup
     {
-#pragma warning disable CA1822 // Mark members as static
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Startup"/> class.
         /// </summary>
@@ -56,7 +55,6 @@ namespace BlazorUI
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddSingleton<WeatherForecastService>();
         }
 
         /// <summary>
@@ -97,7 +95,7 @@ namespace BlazorUI
                 endpoints.MapFallbackToPage("/_Host");
             });
         }
-
-#pragma warning restore CA1822 // Mark members as static
     }
 }
+
+#pragma warning restore CA1822 // Mark members as static
