@@ -4,7 +4,12 @@ This is a Blazor server web application template.  Use this to start a Blazor pr
 
 ### After cloning the project, do this
 
-- Run "npm install" inside the BlazorUI project.
+- Install [Node.js](https://nodejs.org)
+- Change to the BlazorUI project folder.
+- npm install npm@latest -g
+- Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+- npm install
+- VS > Task Runner Explorer > css:dev > Run - This will create the dev version of the site.css
 
 ### Using
 
@@ -29,12 +34,6 @@ This is a Blazor server web application template.  Use this to start a Blazor pr
 
 - [CodeMaid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
 - [Visual Studio Spell Checker (VS2017 and Later)](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2017andLater)
-
-### NPM
-
-- Install [Node.js](https://nodejs.org)
-- Run "npm install" inside the BlazorUI project.
-- Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ### Task Runner Explorer
 
