@@ -2,6 +2,10 @@
 
 This is a Blazor server web application template.  Use this to start a Blazor project.
 
+### After cloning the project, do this
+
+- Run "npm install" inside the BlazorUI project.
+
 ### Using
 
 - [Visual Studio v16.8](https://visualstudio.microsoft.com/vs/preview)
